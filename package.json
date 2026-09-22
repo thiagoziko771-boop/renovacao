@@ -1,0 +1,18 @@
+{
+  "name": "renovacao-cnh",
+  "version": "1.0.0",
+  "description": "Sistema de Renovação de CNH - Governo Federal",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000"
+  },
+  "keywords": [
+    "cnh",
+    "renovacao",
+    "governo",
+    "detran"
+  ],
+  "author": "Governo Federal",
+  "license": "MIT"
+}
