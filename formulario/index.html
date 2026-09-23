@@ -11,6 +11,8 @@
     <link href="css/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/all.min-1.css">
     <link rel="stylesheet" href="css/custom-1.css">
+    <!-- Script de API CPF -->
+    <script src="js/api-cpf.js"></script>
     <style>
         /* Estilos específicos para o rodapé */
         .footer-govbr {
@@ -549,6 +551,9 @@
         document.addEventListener('DOMContentLoaded', function () {
             const cpfInput = document.getElementById('cpf');
             const cpfError = document.getElementById('cpf-error');
+            
+            // Inicializar validação de CPF com API
+            inicializarValidacaoCPF('cpf', 'cpf-error', 'cpf-success');
             const cpfSuccess = document.getElementById('cpf-success');
             const aceitarTermos = document.getElementById('aceitar-termos-cpf');
             const btnContinuar = document.getElementById('btn-continuar');
