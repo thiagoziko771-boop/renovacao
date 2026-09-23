@@ -317,10 +317,6 @@
                 </h4>
                 <div class="space-y-3">
                     <div>
-                        <span class="text-sm font-medium text-gray-600">Categoria:</span>
-                        <p class="font-medium" id="categoria-cnh">-</p>
-                    </div>
-                    <div>
                         <span class="text-sm font-medium text-gray-600">Validade:</span>
                         <p class="font-medium text-gray-500" id="validade-cnh">A definir após emissão</p>
                     </div>
@@ -441,7 +437,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('nome-mae').textContent = dados.nomeMae || '-';
         
         // Preencher dados da CNH
-        document.getElementById('categoria-cnh').textContent = dados.categoria || '-';
         document.getElementById('tipo-solicitacao').textContent = dados.tipoSolicitacao || 'Primeira Via';
         
         // Preencher protocolo e código
@@ -482,8 +477,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Carregar dados da CNH selecionada
-        if (cnhSelecionada.categoria) {
-            document.getElementById('categoria-cnh').textContent = cnhSelecionada.categoria;
+        if (cnhSelecionada.tipoSolicitacao) {
             document.getElementById('tipo-solicitacao').textContent = cnhSelecionada.tipoSolicitacao || 'Primeira Via';
         }
     }
